@@ -90,8 +90,74 @@
             padding: 1rem 2.4rem
         }
     </style>
+    <script>
+        document.getElementById("#submit");
+    </script>
 </head>
 <body>
-    
+        
+        <main>
+            <h1>Registration</h1>
+            <form action="action.php">
+
+            <div class = "flex-field">
+                <label for="Username" class = "grid-label">Username</label>
+            <input type="text" name="username" placeholder = "Add your Name" minlength="3" maxlength="10" class = "grid-input" >
+            </div>
+
+            <div class = "flex-field">
+            <label for="Email">Email</label>
+            <input type = "email" name="username" placeholder = "Add your Email" class = "grid-input"> 
+            </div>
+
+            </div class = "flex-field">
+            <label for="Password" class = "grid-label">Password</label>
+            <input type="password" name="password" id="" placeholder = "Add your Password" class = "grid-input"> 
+            </div>
+
+            <div class = "flex-field"> 
+            <label for="Number" class = "grid-label">Number</label>
+            <input type="number" name="Cellphone Number" id="" class = "grid-input">
+            </div>
+
+            </div class = "flex-field">
+            <label for ="Password" class = "grid-label">Number</label>
+            <input type="hidden" value="abic1234" name="secret_key" class = "grid-input">
+            </div>
+
+            </div class = "flex-field">
+            <textarea name ="address" id="" rows ="5"></textarea>
+            </div>
+
+            </div class = "flex-field">
+            <input type="date" name ="date" id="">
+            <input type="datetime" name="datetime" id="">
+            </div>
+
+            </div class = "flex-field">
+            <input type="radio" name="skills" id=""> <label for="skills">Programming</label>
+            <input type="radio" name="skills" id=""> <label for="skills">Bro</label>
+            <input type="radio" name="skills" id=""  value ="web" checked>
+            <label for="skills">web</label>
+            </div>
+
+            </div>
+            <input type="file"name="file" id ="">
+            <select name="year-level" id="">
+            <option value=""disabled selected>----Year Level----</option>
+            <optgroup label = "College"></optgroup>
+            <option value="1">First year</option><option value="2">Second Year</option><option value="3">Third Year</option><option value="4">Fourt Year</option>
+            </div>
+
+            </div>
+            <input type = "submit" value = "click submit" accept =".jpg,.png,.gif">
+            </div>
+            </div>
+            </select>
+            <input type="reset" value="reset" id = "submit">
+            </div>
+            </form>
+                
+            </main>
 </body>
 </html> 
