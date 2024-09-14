@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
-
     <style>
         * {
-          padding: 0;
-          margin: 0;  
+            padding: 0;
+            margin: 0;  
         }
 
         body {
             background-color: #f8f7ff;
             height: 100%;
             padding-block: 5%;
-            
         }
 
         main {
@@ -34,130 +32,128 @@
             font-size: 2.5rem;
         }
 
-        .form-title {
-            margin: auto;
-        }
-        
-        input[type="radio"]{
-            color: white;
-        }
-
         .flex-field {
             display: grid;
             grid-template-columns: 25% 75%;
-            justify-content: flex-end;
             align-items: center;
             gap: 10px;
             padding-inline: 1.3rem;
             margin-bottom: 2rem;
-            
         }
 
         .grid-input {
             flex-grow: 1;
             font-size: 12px;
-            padding-block: 6px;
-            padding-inline: 4px;
+            padding: 6px 4px;
             box-sizing: border-box;
-            border-color: beige;
+            border: 1px solid transparent;
             background-color: transparent;
-            border-color: transparent transparent black transparent;
-            
-
+            border-bottom-color: black;
         }
 
         .grid-label {
             text-align: right;
-            
         }
 
         .grid-select {
             font-size: 12px;
-            padding-block: 6px 4px;
-            line-height: 4px;    
+            padding: 6px 4px;
         }
 
         .checkbox-form {
             padding-inline: 4rem;
             margin-bottom: 2.5rem;
         }
-        
+
         .form-button {
             background-color: #f8f7ff;
             color: #9381ff;
-            border: 0px;
+            border: none;
             border-radius: 4px;
-            padding: 1rem 2.4rem
+            padding: 1rem 2.4rem;
+            cursor: pointer;
+            margin-right: 1rem;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+            margin-bottom: 2rem;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
         }
     </style>
-    <script>
-        document.getElementById("#submit");
-    </script>
 </head>
 <body>
-        
-        <main>
-            <h1>Registration</h1>
-            <form action="action.php">
-
-            <div class = "flex-field">
-                <label for="Username" class = "grid-label">Username</label>
-            <input type="text" name="username" placeholder = "Add your Name" minlength="3" maxlength="10" class = "grid-input" >
+    <main>
+        <h1>Registration</h1>
+        <form action="action.php">
+            <div class="flex-field">
+                <label for="username" class="grid-label">Username</label>
+                <input type="text" name="username" id="username" placeholder="Enter your username" minlength="3" maxlength="10" class="grid-input">
             </div>
 
-            <div class = "flex-field">
-            <label for="Email">Email</label>
-            <input type = "email" name="username" placeholder = "Add your Email" class = "grid-input"> 
+            <div class="flex-field">
+                <label for="email" class="grid-label">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email address" class="grid-input"> 
             </div>
 
-            </div class = "flex-field">
-            <label for="Password" class = "grid-label">Password</label>
-            <input type="password" name="password" id="" placeholder = "Add your Password" class = "grid-input"> 
+            <div class="flex-field">
+                <label for="password" class="grid-label">Password</label>
+                <input type="password" name="password" id="password" placeholder="Enter your password" class="grid-input"> 
             </div>
 
-            <div class = "flex-field"> 
-            <label for="Number" class = "grid-label">Number</label>
-            <input type="number" name="Cellphone Number" id="" class = "grid-input">
+            <div class="flex-field">
+                <label for="cellphone" class="grid-label">Phone Number</label>
+                <input type="number" name="cellphone" id="cellphone" placeholder="Enter your phone number" class="grid-input">
             </div>
 
-            </div class = "flex-field">
-            <label for ="Password" class = "grid-label">Number</label>
-            <input type="hidden" value="abic1234" name="secret_key" class = "grid-input">
+            <div class="flex-field">
+                <input type="hidden" value="abic1234" name="secret_key">
             </div>
 
-            </div class = "flex-field">
-            <textarea name ="address" id="" rows ="5"></textarea>
+            <div class="flex-field">
+                <textarea name="address" id="address" rows="5" placeholder="Enter your address"></textarea>
             </div>
 
-            </div class = "flex-field">
-            <input type="date" name ="date" id="">
-            <input type="datetime" name="datetime" id="">
+            <div class="flex-field">
+                <input type="date" name="date" id="date">
+                <input type="datetime-local" name="datetime" id="datetime">
             </div>
 
-            </div class = "flex-field">
-            <input type="radio" name="skills" id=""> <label for="skills">Programming</label>
-            <input type="radio" name="skills" id=""> <label for="skills">Bro</label>
-            <input type="radio" name="skills" id=""  value ="web" checked>
-            <label for="skills">web</label>
+            <div class="flex-field">
+                <input type="radio" name="skills" id="programming" value="programming">
+                <label for="programming">Programming</label>
+                <input type="radio" name="skills" id="bro" value="bro">
+                <label for="bro">Bro</label>
+                <input type="radio" name="skills" id="web" value="web" checked>
+                <label for="web">Web</label>
             </div>
 
-            </div>
-            <input type="file"name="file" id ="">
-            <select name="year-level" id="">
-            <option value=""disabled selected>----Year Level----</option>
-            <optgroup label = "College"></optgroup>
-            <option value="1">First year</option><option value="2">Second Year</option><option value="3">Third Year</option><option value="4">Fourt Year</option>
+            <div class="flex-field">
+                <input type="file" name="file" id="file">
             </div>
 
+            <div class="flex-field">
+                <select name="year-level" id="year-level" class="grid-select">
+                    <option value="" disabled selected>----Year Level----</option>
+                    <optgroup label="College">
+                        <option value="1">First year</option>
+                        <option value="2">Second Year</option>
+                        <option value="3">Third Year</option>
+                        <option value="4">Fourth Year</option>
+                    </optgroup>
+                </select>
             </div>
-            <input type = "submit" value = "click submit" accept =".jpg,.png,.gif">
+
+            <div class="flex-field">
+                <input type="submit" value="Submit" class="form-button">
+                <input type="reset" value="Reset" class="form-button">
             </div>
-            </div>
-            </select>
-            <input type="reset" value="reset" id = "submit">
-            </div>
-            </form>
-                
-            </main>
+        </form>
+    </main>
 </body>
-</html> 
+</html>
